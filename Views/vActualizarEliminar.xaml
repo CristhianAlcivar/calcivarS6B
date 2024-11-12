@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="calcivarS6B.Views.vActualizarEliminar"
+            >
+    <VerticalStackLayout >
+        <Label 
+            Text="Actualizar usuario"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Entry x:Name="txtId"
+            IsReadOnly="True"/>
+        <Entry x:Name="txtNombre"
+            Placeholder="Ingrese el nombre"/>
+        <Entry x:Name="txtApellido"
+            Placeholder="Ingrese el apellido"/>
+        <Entry x:Name="txtEdad"
+            Placeholder="Ingrese el edad"
+            Keyboard="Numeric"
+            MaxLength="2"/>
+
+        <Grid VerticalOptions="Center" RowSpacing="20">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+
+            </Grid.ColumnDefinitions>
+            <Button x:Name="btnActualizar"
+                 Grid.Row="0" Grid.Column="0"
+                 Text="GuardarActualizar"
+                 Clicked="btnActualizar_Clicked"/>
+                
+            <Button x:Name="btnEliminar"
+                Text="Eliminar"
+                BackgroundColor="Red"
+                Grid.Row="0" Grid.Column="1"
+                Clicked="btnEliminar_Clicked"/>
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>
